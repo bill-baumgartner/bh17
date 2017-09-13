@@ -1,0 +1,8 @@
+https://api.pharmgkb.org/v1/download/file/data/genes.zip
+https://api.pharmgkb.org/v1/download/file/data/rsid.zip
+https://api.pharmgkb.org/v1/download/file/data/drugs.zip
+https://api.pharmgkb.org/v1/download/file/data/phenotypes.zip
+https://api.pharmgkb.org/v1/download/file/data/pathways-biopax.zip
+https://api.pharmgkb.org/v1/download/file/data/pathways-tsv.zip
+https://api.pharmgkb.org/v1/download/file/data/dosingGuidelines.json.zip
+https://api.pharmgkb.org/v1/download/file/data/drugLabels.zip
