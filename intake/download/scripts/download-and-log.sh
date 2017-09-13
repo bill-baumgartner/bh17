@@ -21,6 +21,7 @@ CUR_DIR=`pwd`
 
 #verify target dir and switch there
 mkdir -p $TARGET_DIR
+echo "Created target directory: ${TARGET_DIR}"
 cd $TARGET_DIR
 
 #append forwardslash to target directory if it doesn't end in a slash already
@@ -36,7 +37,7 @@ esac
 touch $LOG_FILE
 
 date | tee -a $LOG_FILE
-wget -c -t 0 --timeout 60 --waitretry 10 -P $TARGET_DIR $URL | tee -a $LOG_FILE
+wget -c -t 0 --timeout 60 --waitretry 10 $URL | tee -a $LOG_FILE
 e=${PIPESTATUS[0]}
 date | tee -a $LOG_FILE
 exit $e
