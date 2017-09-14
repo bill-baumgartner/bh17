@@ -27,5 +27,5 @@ if [[ -z $CONFIG_FILE ]]; then
     exit 1
 fi
 
-mvn -e -f /carnival_scripts/pom_run_r2rml.xml exec:exec \
+mvn -X -e -f /carnival_scripts/pom_run_r2rml.xml exec:exec \
         -DconfigurationFile=$CONFIG_FILE
