@@ -39,6 +39,7 @@
 					<executable>java</executable>
 					<arguments>
 						<argument>-Xmx4G</argument>
+						<argument>-Djdbc.drivers=org.apache.drill.jdbc.Driver</argument>
 						<argument>-classpath</argument>
 						<classpath />
 						<argument>r2rml.Main</argument>
