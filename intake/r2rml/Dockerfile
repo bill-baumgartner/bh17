@@ -18,3 +18,6 @@ RUN git clone https://opengogs.adaptcentre.ie/debruync/r2rml.git /r2rml.git && \
                                                                                   -Dpackaging=jar \
                                                                                   -DgeneratePom=true && \
 	mvn clean install -f ./r2rml.git/pom.xml
+
+COPY scripts/ /carnival_scripts
+COPY config/ /carnival_config

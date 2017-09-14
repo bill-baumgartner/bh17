@@ -1,0 +1,23 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix kraken: <http://kraken.semanticscience.org/>.
+
+
+<#Test>
+    rr:logicalTable [ rr:sqlQuery """
+		select 
+			columns[0] as pharmgkbid 
+			, columns[1] as geneid
+		from dfs.`/carnival_data/intake/data/genes/genes.tsv`
+		limit 10 
+		offset 1
+    """];
+    rr:subjectMap [
+        rr:termType rr:IRI;
+        rr:template "http://kraken.semanticscience.org/pharmgkb/{pharmgkbid}";
+        rr:class kraken:Identifier;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate kraken:hasGene;
+        rr:objectMap [ rr:column "geneid" ];
+    ];
+    .
